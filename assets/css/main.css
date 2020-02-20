@@ -3234,12 +3234,10 @@ input, select, textarea {
 			}
 
 				#footer > .inner section:nth-child(1) {
-					width: calc(66% - 1.25em);
 					margin-right: 1.25em;
 				}
 
 				#footer > .inner section:nth-child(2) {
-					width: calc(33% - 1.25em);
 					margin-left: 1.25em;
 				}
 
@@ -3248,12 +3246,11 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#footer > .inner section:nth-child(1) {
-				width: 66%;
+				width: 100%;
 				margin-right: 0;
 			}
 
 			#footer > .inner section:nth-child(2) {
-				width: calc(33% - 2.5em);
 				margin-left: 2.5em;
 			}
 
