@@ -14,7 +14,7 @@ function getContent(tab){
                 var add = "<pre><code>"+this.gsx$rule.$t+"</code></pre>";
             }
             else if(tab==3){
-                var add = "<p>Author: <b>"+this.gsx$author.$t+"</b></p><ul class='actions'><li><a target='_blank' href="+this.gsx$link.$t+" class='button small'>Link</a></li></ul><hr>";
+                var add = "<p><b>"+this.gsx$author.$t+"</b> - "+this.gsx$date.$t+"</p><ul class='actions'><li><a target='_blank' href="+this.gsx$link.$t+" class='button small'>Link</a></li></ul><hr>";
             }
 
             $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p>'+ add);
