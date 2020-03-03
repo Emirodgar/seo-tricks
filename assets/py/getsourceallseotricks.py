@@ -16,3 +16,10 @@ with urllib.request.urlopen(finalUrl) as url:
     with open('../../json/guides-talks.json', 'w') as f:
         json.dump(data, f)
 
+finalUrl = "https://spreadsheets.google.com/feeds/list/" + str(spreadsheetID) + "/2/public/values?alt=json"
+
+with urllib.request.urlopen(finalUrl) as url:
+    data = json.loads(url.read().decode())
+    with open('../../json/templates.json', 'w') as f:
+        json.dump(data, f)
+

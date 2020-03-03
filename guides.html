@@ -23,7 +23,7 @@ permalink: /guides-and-talks
 
 		    var entry = data.feed.entry;
 		    $(entry).each(function(){
-			    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><p><b>'+this.gsx$author.$t+'</b> - '+this.gsx$date.$t+'</p><ul class="actions"><li><a target="_blank" href='+this.gsx$link.$t+' class="button small">Link</a></li></ul><hr>');
+			    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><p><b>'+this.gsx$author.$t+'</b> - '+this.gsx$date.$t+'</p><ul class="actions"><li><a target="_blank" rel="noopener" href='+this.gsx$link.$t+' class="button small">Link</a></li></ul><hr>');
 			});
 		 });
 
@@ -59,7 +59,7 @@ permalink: /guides-and-talks
 						<ul>
 							<li><a href="https://allseotricks.com/">Home</a></li>
 							<li><a href="">Bookmarklets</a></li>
-							<li><a href="">Templates</a></li>
+							<li><a href="/templates">Templates</a></li>
 							<li><a href="/formulas">Formulas</a></li>
 							<li><a href="/guides-and-talks">Guides & Talks</a></li>
 							<li><a href="">Tools</a></li>
