@@ -1,0 +1,108 @@
+---
+permalink: /templates
+---
+
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SEO templates - Google Sheet | Free SEO resources</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="icon" href="images/favicon.png">
+		<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+		<script>
+
+		var json = "https://allseotricks.com/json/templates.json";
+
+		$.getJSON(json, function(data) {
+
+		    var entry = data.feed.entry;
+		    $(entry).each(function(){
+			    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><ul class="actions"><li><a target="_blank" rel="noopener" href='+this.gsx$link.$t+' class="button small">Link</a></li></ul><hr>');
+			});
+		 });
+
+		</script>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="https://allseotricks.com" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">SEO TRICKS</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="https://allseotricks.com/">Home</a></li>
+							<li><a href="">Bookmarklets</a></li>
+							<li><a href="">Templates</a></li>
+							<li><a href="/formulas">Formulas</a></li>
+							<li><a href="/guides-and-talks">Guides & Talks</a></li>
+							<li><a href="">Tools</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>SEO formulas - Google Sheets</h1>
+							<div class="results"></div>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a target="_blank" href="https://twitter.com/emirodgar" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a target="_blank" href="https://es.linkedin.com/in/emirodgar" class="icon brands style2 fa-linkedin"><span class="label">linkedIn</span></a></li>
+									<li><a href="mailto:hola@emirodgar.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li> SEO tricks. <b>Free SEO resources</b> </li><li>Design: <a href="http://html5up.net">HTML5 UP</a> <li>Author: <a href="https://emirodgar.com">Emirodgar</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
