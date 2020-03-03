@@ -20,24 +20,19 @@ permalink: /formulas
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script>
+		<script>
 
-  // ID of the Google Spreadsheet
-var spreadsheetID = "1PrRuSt-2IkZplJ3mwllo7YA3J025H65G0X46KtDJ4Wo";
+		var json = "https://allseotricks.com/json/formulas.json";
 
-var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/1/public/values?alt=json"; //this is the part that's changed
+		$.getJSON(json, function(data) {
 
-$.getJSON(url, function(data) {
+		    var entry = data.feed.entry;
+		    $(entry).each(function(){
+			    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><pre><code>'+this.gsx$rule.$t+'</code></pre>');
+			});
+		 });
 
-    var entry = data.feed.entry;
-
-    $(entry).each(function(){
-    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><pre><code>'+this.gsx$rule.$t+'</code></pre>');
-      });
-
-    });
-
-							</script>
+		</script>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->

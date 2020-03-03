@@ -15,6 +15,19 @@ permalink: /guides-and-talks
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  		<script>
+
+		var json = "https://allseotricks.com/json/guides-talks.json";
+
+		$.getJSON(json, function(data) {
+
+		    var entry = data.feed.entry;
+		    $(entry).each(function(){
+			    $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p><p><b>'+this.gsx$author.$t+'</b> - '+this.gsx$date.$t+'</p><ul class="actions"><li><a target="_blank" href='+this.gsx$link.$t+' class="button small">Link</a></li></ul><hr>');
+			});
+		 });
+
+		</script>
   		<link rel="icon" href="images/favicon.png">
 	</head>
 	<body class="is-preload">
@@ -86,8 +99,5 @@ permalink: /guides-and-talks
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/seotricks.js"></script>
-			<script>getContent(3);</script>
-
 	</body>
 </html>

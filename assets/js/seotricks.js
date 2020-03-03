@@ -14,10 +14,13 @@ function getContent(tab){
                 var add = "<pre><code>"+this.gsx$rule.$t+"</code></pre>";
             }
             else if(tab==3){
-                var add = "<p><b>"+this.gsx$author.$t+"</b> - "+this.gsx$date.$t+"</p><ul class='actions'><li><a target='_blank' href="+this.gsx$link.$t+" class='button small'>Link</a></li></ul><hr>";
+                var add = "";
             }
 
             $('.results').append('<h2>'+this.title.$t+'</h2><p>'+this.gsx$description.$t+'</p>'+ add);
+
+            var blob = new Blob([$("html").html()], {type: "text/html;charset=utf-8"});
+            saveAs(blob, "test.html");
 
           });
 
